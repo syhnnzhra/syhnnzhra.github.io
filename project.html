@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewreport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Homepage saya</title>
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <div class="logo">
+                    <a href="index.html"><img src="image/logo1.jpg" alt=""></a>
+                </div>
+                    <div class="tonggle" onclick="tonggleMenu();"></div>
+                        <ul class="navigation">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Project</span></h2>
+                    <p>Beberapa project web yang pernah saya buat<br>
+                        <a href="http://smkn11bdg.sch.id/">Web Sekolah (Laravel 7) - SMKN 11 Bandung</a>
+                        <br> <a href="">Web Teaching Factory(Code Igniter 3) - Upskuy</a>
+                        <br> <a href="">Web Ujikom (Laravel 7) - Second Things</a>
+                    </p>
+                </div>
+                <div class="imgBox">
+                    <img src="image/project.png" class="starbucks">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="image/1.png" onclick="imgSlider('image/dev.png');changeCircleColor('#32B4B4')"></li>
+                <li><img src="image/2.png" onclick="imgSlider('image/mei.png');changeCircleColor('#62B2A3')"></li>
+                <li><img src="image/3.png" onclick="imgSlider('image/olla.png');changeCircleColor('#eeb832')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="image/facebook (5).png"></a></li>
+                <li><a href="#"><img src="image/twitter.png"></a></li>
+                <li><a href="#"><img src="image/instagram.png"></a></li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector('.starbucks').src = anything;
+            }
+            function changeCircleColor(color) {
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+            function tonggleMenu() {
+                var menuTonggle = document.querySelector('.tonggle');
+                var navigation = document.querySelector('.navigation');
+                menuTonggle.classList.toggle('active')
+                navigation.classList.toggle('active')
+            }
+            </script>
+            
+    </body>
+    </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewreport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Homepage saya</title>
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <div class="logo">
+                    <a href="index.html"><img src="image/logo1.jpg" alt=""></a>
+                </div>
+                    <div class="toggle" onclick="toggleMenu();"></div>
+                        <ul class="navigation">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Syahnan Afifah</h2>
+                    <br><span>Junior Programmer</span>
+                    <span>| Student</span>
+                </div>
+                <div class="imgBox">
+                    <img src="image/syahnan.png" class="starbucks">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="image/1.png" onclick="imgSlider('image/maung.png');changeCircleColor('#017143')"></li>
+                <li><img src="image/2.png" onclick="imgSlider('image/kancil.png');changeCircleColor('#eb7495')"></li>
+                <li><img src="image/3.png" onclick="imgSlider('image/gajah.png');changeCircleColor('#d752b1')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="image/facebook (5).png"></a></li>
+                <li><a href="#"><img src="image/twitter.png"></a></li>
+                <li><a href="#"><img src="image/instagram.png"></a></li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector('.starbucks').src = anything;
+            }
+            function changeCircleColor(color) {
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+            function toggleMenu() {
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active')
+                navigation.classList.toggle('active')
+            }
+            </script>
+            
+    </body>
+    </html>

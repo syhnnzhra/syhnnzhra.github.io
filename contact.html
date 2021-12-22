@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewreport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Homepage saya</title>
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <div class="logo">
+                    <a href="index.html"><img src="image/logo1.jpg" alt=""></a>
+                </div>
+                    <div class="tonggle" onclick="tonggleMenu();"></div>
+                        <ul class="navigation">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Fauna<br><span>Australis</span></h2>
+                    <p>Fauna Australis menempati wilayah Indonesia bagian Timur seperti Kepulauan di Papua dan Maluku Utara. 
+                        Pada umumnya, fauna tipe Australia berukuran tidak terlalu besar. Ciri yang paling khas di kawasan ini adalah mamalia berkantong.</p>
+                        <a href="infoAustralis.html">Learn More</a>
+                </div>
+                <div class="imgBox">
+                    <img src="image/9.png" class="starbucks">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="image/9(1).png" onclick="imgSlider('image/9.png');changeCircleColor('#017143')"></li>
+                <li><img src="image/8(1).png" onclick="imgSlider('image/8.png');changeCircleColor('#eb7495')"></li>
+                <li><img src="image/7(1).png" onclick="imgSlider('image/7.png');changeCircleColor('#EDCDC7')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="image/facebook (5).png"></a></li>
+                <li><a href="#"><img src="image/twitter.png"></a></li>
+                <li><a href="#"><img src="image/instagram.png"></a></li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector('.starbucks').src = anything;
+            }
+            function changeCircleColor(color) {
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+            function tonggleMenu() {
+                var menuTonggle = document.querySelector('.tonggle');
+                var navigation = document.querySelector('.navigation');
+                menuTonggle.classList.toggle('active')
+                navigation.classList.toggle('active')
+            }
+            </script>
+            
+    </body>
+    </html>
